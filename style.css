@@ -1,0 +1,399 @@
+/* First i want to change the font family of the current site */
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+  --theme-color: #e34537;
+  --theme-color-faded: #e34537e7;
+  --main-text: #080808;
+  --light-text: #f1f1f1;
+  --section-2-bg: #cccccc;
+  --section-2-h2: #333333;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Raleway", sans-serif;
+  background-color: var(--main-text);
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+header .active {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: auto 10px;
+}
+
+.container {
+  text-align: center;
+}
+
+h2 {
+  font-family: "Raleway", sans-serif;
+}
+
+p {
+  font-size: 1em;
+}
+
+/* ----- ### nav */
+.active {
+  background-color: #222;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.active a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.active .navbar-toggle {
+  text-transform: uppercase;
+  margin-left: 2em;
+  margin-top: 2em;
+}
+
+.active .top-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.top-nav li {
+  padding: 1em;
+}
+
+.top-nav a {
+  text-transform: capitalize;
+}
+
+.top-nav li a:hover {
+  color: #e34537;
+}
+
+/* ### template section */
+.bg-section1 {
+  background: url(/pexels-edgars-kisuro-1488463.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: 4em;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  color: var(--light-text);
+}
+
+.container .templete h2 {
+  font-size: 4rem;
+  color: var(--light-text);
+  text-transform: uppercase;
+  font-family: "Raleway", sans-serif;
+  text-shadow: 1px 3px 5px var(--main-text);
+}
+
+.container .templete .text {
+  color: #fff;
+  font-size: 1.2em;
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  text-shadow: 1px 3px 5px var(--main-text);
+}
+
+.icon {
+  padding-top: 15px;
+  font-size: 35px;
+  filter: drop-shadow(0 0 0.9rem var(--main-text));
+  transition: 0.7s ease-in-out;
+}
+
+.icon i:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+/* ### about us  */
+.bg-section2 {
+  background-color: var(--section-2-bg);
+  margin-top: -1.5em;
+}
+.about {
+  position: relative;
+}
+
+.about h2 {
+  color: var(--section-2-h2);
+  text-transform: capitalize;
+  margin-top: -3rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.container .about .us-section {
+  width: 40%;
+  margin: auto;
+  padding-bottom: 25px;
+  color: var(--main-text);
+}
+
+.container .about .round {
+  text-decoration: none;
+  text-transform: capitalize;
+  margin-top: 10px;
+  background-color: var(--theme-color);
+  color: var(--light-text);
+  padding: 8px 12px;
+  border-radius: 10px;
+}
+
+.container .about .round:hover {
+  background-color: var(--theme-color-faded);
+}
+
+.about .border {
+  margin: auto;
+  width: 30%;
+  height: 5px;
+  background-color: #e34537;
+  position: absolute;
+}
+
+.round:hover {
+  background: #e34537;
+  color: #fff;
+}
+
+.skills-list {
+  width: 50%;
+  margin: auto;
+  padding-top: 80px;
+}
+
+.item {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.skills-name {
+  color: var(--main-text);
+  text-transform: capitalize;
+  font-size: 18px;
+  width: 30%;
+}
+
+.progress {
+  border: 1px solid white;
+  width: 90%;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.progress-bar {
+  border: 1px solid #e34537;
+  border-radius: 20px;
+  width: 70%;
+  background-color: #e34537;
+}
+
+.bar-1 {
+  width: 80%;
+  color: white;
+}
+
+.bar-2 {
+  width: 60%;
+  color: white;
+}
+
+.bar-3 {
+  color: white;
+  width: 40%;
+}
+
+/* ### service  */
+.bg-section {
+  background-color: var(--main-text);
+  width: 100%;
+}
+
+.service {
+  padding-top: 5em;
+  width: 100%;
+}
+
+.service h1 {
+  color: var(--light-text);
+  text-transform: capitalize;
+  margin-top: -8rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.our {
+  display: flex;
+}
+
+.our-service {
+  width: 500px;
+  background-color: gray;
+  padding: 20px 15px 20px 15px;
+  margin: 15px;
+  border-radius: 10px;
+}
+
+.our-service:hover .shape {
+  cursor: pointer;
+  transform: rotateZ(40deg);
+}
+
+.your {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.your h2 {
+  text-transform: capitalize;
+  margin-bottom: 1em;
+}
+
+.your p {
+  text-align: center;
+}
+
+.shape {
+  border-radius: 10px;
+  width: 30px;
+  height: 30px;
+  background-color: #e34537;
+  margin: auto;
+  transition: 0.5s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shape i {
+  font-size: 1.5em;
+}
+
+/* ### newsletter */
+.newsletter {
+  height: 50vh;
+  background-color: var(--section-2-h2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.newsletter .bg-font {
+  color: var(--light-text);
+  text-transform: capitalize;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.sm-font {
+  width: 80%;
+}
+
+.input {
+  display: flex;
+  gap: 3px;
+}
+
+.input input {
+  padding: 10px;
+  width: 350px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.input input::placeholder {
+  color: var(--theme-color-faded);
+}
+
+.input button {
+  text-transform: capitalize;
+  color: var(--light-text);
+  background-color: var(--theme-color);
+  outline: none;
+  border: none;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+/* CONTACT */
+.contact {
+  color: var(--light-text);
+  background-color: var(--main-text);
+}
+
+.contact .container h2 {
+  font-size: 2.5rem;
+  margin-top: -3rem;
+  text-transform: capitalize;
+}
+
+.contact .container p {
+  margin-top: -1rem;
+}
+
+.contact .container form {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+.contact .container form input {
+  padding: 15px;
+  margin-bottom: 0.5rem;
+}
+
+.contact .container button {
+  margin: 0.5rem auto 0.5rem auto;
+  width: 20%;
+  text-transform: capitalize;
+  color: var(--light-text);
+  background-color: var(--theme-color);
+  outline: none;
+  border: none;
+  padding: 12px;
+  border-radius: 5px;
+}
+
+textarea {
+  resize: none;
+  height: 150px;
+}
+
+textarea::placeholder {
+  padding-left: 12px;
+  padding-top: 12px;
+  font-family: sans-serif;
+}
+
+/* NOTE, I HAVENT MADE IT MOBILE RESPONSIVE YET */

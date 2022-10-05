@@ -1,398 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        :root{
-            color:var#e34537;
-        }
-        body{
-            width:100%;
-            margin:0;
-            padding:0;
-        }
-        ul{
-            list-style-type: none;
-            padding:0;
-            margin: 0;
-        }
-        .border{
-            width: 150px;
-            height:5px;
-            background-color:#e34537;
-            text-align: center;
-        }
-        .container{
-            text-align: center;
-        }
-        h2{
-            font-family: Georgia, 'Times New Roman', Times, serif;
-        }
-        p{
-            font-size:1em;
-        }
-        /* ----- ### nav */
-        .active{
-            background-color: #222;
-            position:fixed;
-            top:0;
-            width:100%;
-            z-index:-1;
-        }
-        .active a{
-            text-decoration: none;
-            color:#fff;
-           
-        }
-        
-        .active .navbar-toggle{
-            text-transform: uppercase;
-            margin-left:2em;
-           margin-top:2em;
-          
-        }
-       .active .top-nav{
-        display:flex;
-        flex-direction: row;
-        justify-content: flex-end;
-       align-items: flex-end;
-        }
-        .top-nav li{
-            padding:1em;
-        }
-        .top-nav a{
-            text-transform: capitalize;
-        }
-        .top-nav li a:hover{
-            color:#e34537;
-        }
-        /* ### template section */
-        .bg-section1{
-            background: url(/rachel-claire-5490969.jpg);
-            background-repeat: no-repeat;
-            background-position:left;
-            margin-top:4em;
-            overflow: scroll;
-            transition:0.5s;
-        }
-        .container .templete h2{
-           padding-top:10em;
-            color:#e34537;
-            text-transform: uppercase;
-            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        }
-        
-        .container .templete .text{
-            color:#fff;
-            font-size:1em;
-            width:50%;
-            text-align:center;
-            margin-left:15em;
-        }
-        .container .templete .icon{
-            
-            margin-bottom:10em;
-        }
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice Web</title>
+    <!-- YOUR ICON WILL NOT WORK WITHOUT A MINIFIED FILE LIKE THE ONE I LINKED BELOW -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
 
-        /* ### about us  */
-        .bg-section2{
-            background-color:#ccc;
-            margin-top:-1.5em;
-            
-        }
-        .about h2{
-            color:#333;
-            text-transform: capitalize;
-            padding-top:1.5em;
-            font-weight:600;
-        }
-        
-        .container .about .us-section{
-            font-weight: 200;
-            width: 40%;
-            margin-left:1em;
-            
-        }
-        .container .about .round{
-            float:left;
-            text-decoration: none;
-            margin-left:5em;
-            text-transform: capitalize;
-            color:#fff;
-            background-color: #e34537;
-            border: 1px solid #e34537;
-            border-radius: 12px;
-            padding:0.5em 1em;
-            transition:0.2s;
-            font-weight:100;
-        }
-        .round:hover{
-            background:#e34537;
-            color:#fff;
-        }
-        
-        .skills-list{
-            
-        }
-        .item{
-
-        }
-        .skills-name{
-            text-transform: capitalize;
-            font-weight: 200;
-        }
-        .progress{
-            border:1px solid white;
-            width:90%;
-            border-radius:10px;
-            background-color: #fff;
-        }
-        .progress-bar{
-            border:1px solid #e34537;
-            border-radius: 20px;
-            width:70%;
-            background-color: #e34537;
-        }
-        .bar-1{
-            width:80%;
-            
-            color:white;
-        }
-        .bar-2{
-            width:60%;
-            color:white;
-        }
-        .bar-3{
-            color:white;
-            width:40%;
-        }
-
-        /* ### service  */
-        .bg-section{
-            background-image:url(/images/rachel-claire-5490969.jpg);
-            background-position: right;
-            width:100%;
-            
-        }
-        .service{
-            padding-top:1em;
-        }
-        .service h1{
-            text-transform: capitalize;
-            color:#fff;
-        }
-        .our{
-            display: flex;
-        }
-        .our-service{
-            
-            color:#fff;
-        }
-        .your h2{
-            text-transform: capitalize;
-            margin-bottom: 1em;
-        }
-        .your p{
-            text-align:center;
-        }
-        .shape{
-            width:30px;
-            height:30px;
-            background-color:#e34537;
-            transform: rotateZ(40deg);
-            margin-left:3em;
-        }
-
-        /* ### newsletter */
-        .newsletter{
-            background-color: #ccc;
-        }
-        </style>
-</head>
-<body>
+    <!-- ALWAYS USE EXTERNAL CSS FOR PROFESSIONALISM AND TO AVOID BUGS, I LINK YOUR CSS FILE BELOW -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- FIXING THE HEADER SECTION -->
     <header>
-        <nav class="active">
-          <a href="#">
-             <i> <span class="navbar-toggle">LOGO</span></i>
-            </a> 
-            <ul class="top-nav">
-           <li> <a href="#">home</a></li>
-           <li> <a href="#">about me</a></li>
-           <li> <a href="#">service</a></li>
-           <li> <a href="#">portfolio</a></li>
-           <li> <a href="#">contact</a></li>
-            </ul>
-        </nav>
+      <nav class="active">
+        <a href="#">
+          <!-- YOUR LOGO WAS NOT WELL CENTERED, REFER TO STYLE.CSS -->
+          <i> <span class="navbar-toggle">LOGO</span></i>
+        </a>
+        <ul class="top-nav">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Service</a></li>
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
     </header>
+
     <section class="bg-section1" id="js-section">
-        <div class="container">
-            <div class="templete">
-                <h2>personel html templete</h2>
-                <div class="text">
-                   <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae, facilis deserunt fugit eos enim tempora? Eligendi, debitis id voluptatum veniam numquam voluptatem dolore beatae est maxime sit sed consequatur dolorum.</p>
-                </div>
-                <div class="icon">
-                    <i class="fa fa-facebook"></i>
-                    <i class="fa fa-intagram"></i>
-                    <i class="fa fa-twitter"></i>
-                    <i class="fa fa-pinintrest"></i>
-                    <i class="fa fa-youtube"></i>
-                </div>
-    
-            </div>
+      <div class="container">
+        <div class="templete">
+          <h2>Personal HTML Template</h2>
+          <div class="text">
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Molestiae, facilis deserunt fugit eos enim tempora? Eligendi,
+              debitis id voluptatum veniam numquam voluptatem dolore beatae est
+              maxime sit sed consequatur dolorum.
+            </p>
+          </div>
+          <div class="icon">
+            <i class="bx bxl-facebook"></i>
+            <i class="bx bxl-instagram"></i>
+            <i class="bx bxl-twitter"></i>
+            <i class="bx bxl-linkedin"></i>
+            <i class="bx bxl-pinterest"></i>
+          </div>
         </div>
-        
+      </div>
     </section>
 
     <!-- ### about section -->
     <section class="bg-section2" id="js-section">
-        <div class="container">
-            <div class="about">
-                <h2>about us</h2>
-                <div class="border"></div>
-                <p class="us-section">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, perferendis rem aliquam ducimus expedita similique, quia architecto reprehenderit ipsam provident enim 
-                    perspiciatis autem id sed tempora voluptatem iusto, ipsa magnam!
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt, harum ducimus, minima ipsum consequatur fugiat ad libero possimus inventore repellat commodi dolor autem minus 
-                    quos explicabo sequi. Quod, nobis necessitatibus.
-                </p>
-                <a href="#" class="round">read more</a>
-                <div class="skills-list">
-                    <div class="item">
-                        <div class="skills-name">webdesign</div>
-                        <div class="progress">
-                            <div class="progress-bar bar-1">90%</div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="skills-name">ui design</div>
-                        <div class="progress">
-                            <div class="progress-bar bar-2">60%</div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="skills-name">web design</div>
-                        <div class="progress">
-                            <div class="progress-bar bar-3">50%</div>
-                        </div>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="about">
+          <h2>About Us</h2>
+          <p class="us-section">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem,
+            perferendis rem aliquam ducimus expedita similique, quia architecto
+            reprehenderit ipsam provident enim perspiciatis autem id sed tempora
+            voluptatem iusto, ipsa magnam! Lorem ipsum dolor, sit amet
+            consectetur adipisicing elit. Incidunt, harum ducimus, minima ipsum
+            consequatur fugiat ad libero possimus inventore repellat commodi
+            dolor autem minus quos explicabo sequi. Quod, nobis necessitatibus.
+          </p>
+          <a href="#" class="round">read more</a>
+
+          <div class="skills-list">
+            <div class="item">
+              <div class="skills-name">webdesign</div>
+              <div class="progress">
+                <div class="progress-bar bar-1">90%</div>
+              </div>
             </div>
+            <div class="item">
+              <div class="skills-name">ui design</div>
+              <div class="progress">
+                <div class="progress-bar bar-2">60%</div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="skills-name">web design</div>
+              <div class="progress">
+                <div class="progress-bar bar-3">50%</div>
+              </div>
+            </div>
+          </div>
         </div>
-        
+      </div>
     </section>
 
     <!-- ### our service -->
     <section class="bg-section" id="js-section">
-        <div class="container">
-            <div class="service">
-                <h1>our service</h1>
-                <div class="border"></div>
-                <div class="our">
-                    <div class="our-service">
-                        <div class="shape">
-                            <i class="fa fa-arrow"></i>
-                            </div>
-                            <div class="your">
-                                <h2>web designs</h2>
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus perspiciatis unde dolores officia odio deleniti omnis facere delectus laborum suscipit officiis eligendi error dicta possimus, ratione repellat 
-                                    aspernatur minima accusantium!</p>
-                            </div>
-                    </div>
-                    <div class="our-service">
-                        <div class="shape">
-                            <i class="fa fa-arrow"></i>
-                            </div>
-                            <div class="your">
-                                <h2>web designs</h2>
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus perspiciatis unde dolores officia odio deleniti omnis facere delectus laborum suscipit officiis eligendi error dicta possimus, ratione repellat 
-                                    aspernatur minima accusantium!</p>
-                            </div>
-                    </div>
-                    <div class="our-service">
-                        <div class="shape">
-                            <i class="fa fa-arrow"></i>
-                            </div>
-                            <div class="your">
-                                <h2>web designs</h2>
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus perspiciatis unde dolores officia odio deleniti omnis facere delectus laborum suscipit officiis eligendi error dicta possimus, ratione repellat 
-                                    aspernatur minima accusantium!</p>
-                            </div>
-                    </div>
-                    <div class="our-service">
-                        <div class="shape">
-                            <i class="fa fa-arrow"></i>
-                            </div>
-                            <div class="your">
-                                <h2>web designs</h2>
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus perspiciatis unde dolores officia odio deleniti omnis facere delectus laborum suscipit officiis eligendi error dicta possimus, ratione repellat 
-                                    aspernatur minima accusantium!</p>
-                            </div>
-                    </div>
-                    <div class="our-service">
-                        <div class="shape">
-                            <i class="fa fa-arrow"></i>
-                            </div>
-                            <div class="your">
-                                <h2>web designs</h2>
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus perspiciatis unde dolores officia odio deleniti omnis facere delectus laborum suscipit officiis eligendi error dicta possimus, ratione repellat 
-                                    aspernatur minima accusantium!</p>
-                            </div>
-                    </div>
-                    <div class="our-service">
-                        <div class="shape">
-                            <i class="fa fa-arrow"></i>
-                            </div>
-                            <div class="your">
-                                <h2>web designs</h2>
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus perspiciatis unde dolores officia odio deleniti omnis facere delectus laborum suscipit officiis eligendi error dicta possimus, ratione repellat 
-                                    aspernatur minima accusantium!</p>
-                            </div>
-                    </div>
-                   
-                   
-                </div>
-                </div>
-                
+      <div class="container">
+        <div class="service">
+          <h1>our service</h1>
+
+          <div class="our">
+            <div class="our-service">
+              <div class="shape">
+                <i class="bx bx-right-arrow-alt"></i>
+              </div>
+              <div class="your">
+                <h2>web designs</h2>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Doloribus perspiciatis unde dolores officia odio deleniti
+                  omnis facere delectus laborum suscipit officiis eligendi error
+                  dicta possimus, ratione repellat aspernatur minima
+                  accusantium!
+                </p>
+              </div>
+            </div>
+            <div class="our-service">
+              <div class="shape">
+                <i class="bx bx-right-arrow-alt"></i>
+              </div>
+              <div class="your">
+                <h2>web designs</h2>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Doloribus perspiciatis unde dolores officia odio deleniti
+                  omnis facere delectus laborum suscipit officiis eligendi error
+                  dicta possimus, ratione repellat aspernatur minima
+                  accusantium!
+                </p>
+              </div>
+            </div>
+            <div class="our-service">
+              <div class="shape">
+                <i class="bx bx-right-arrow-alt"></i>
+              </div>
+              <div class="your">
+                <h2>web designs</h2>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Doloribus perspiciatis unde dolores officia odio deleniti
+                  omnis facere delectus laborum suscipit officiis eligendi error
+                  dicta possimus, ratione repellat aspernatur minima
+                  accusantium!
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-        
+      </div>
     </section>
 
     <!-- ### news letter -->
-    <section class="bg-sction" id="js-section">
-        <div class="container">
-            <div class="newsletter">
-                <h2 class="bg-font">join our newsletter</h2>
-                <p class="sm-font">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo quod, harum facere aliquam ipsam magni autem. Tempora, reprehenderit, earum, distinctio repudiandae fuga eligendi provident 
-                    dolore soluta ratione atque in quasi.</p>
-                    <i class="fa fa-loading"></i><input type="email" placeholder="enter your email">
-                    <button type>subscribe</button>
-            </div>
+    <section class="newsletter" id="js-section">
+      <div class="container">
+        <div class="newsletter">
+          <h2 class="bg-font">join our newsletter</h2>
+          <p class="sm-font">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo quod,
+            harum facere aliquam ipsam magni autem. Tempora, reprehenderit,
+            earum, distinctio repudiandae fuga eligendi provident dolore soluta
+            ratione atque in quasi.
+          </p>
+          <div class="input">
+            <input type="email" placeholder="Enter your email" />
+            <button type>subscribe</button>
+          </div>
         </div>
-        
+      </div>
     </section>
 
     <!-- ### contact  -->
-    <section class="bg-section" id="js-section">
-        <div class="container">
-            <form method="post">
-                <input type="text" placeholder="your name" name="" id="" checked>
-                <input type="email" placeholder="your email" name="" id="" checked>
-                <input type="tel" placeholder="your phone" name="" id="" checked>
-                <textarea cols="30"  placeholder="your message"></textarea>
-                <button type="submit">send</button>
-            </form>
-        </div>
-       
-
+    <section class="contact" id="js-section">
+      <div class="container">
+        <h2>Contact Us</h2>
+        <p>Input your details below so we can reach out to you</p>
+        <form method="post">
+          <input type="text" placeholder="Name" name="" id="" checked />
+          <input type="email" placeholder="Email" name="" id="" checked />
+          <input type="tel" placeholder="Phone" name="" id="" checked />
+          <textarea placeholder="Message"></textarea>
+          <button type="submit">send</button>
+        </form>
+      </div>
     </section>
 
     <!-- ### footer -->
     <footer class="bg-section" id="js-section">
-        <p class="footer">copyright 2019 &copy all right reserved</p>
+      <p class="footer">copyright 2019 &copy all right reserved</p>
     </footer>
-</body>
+  </body>
 </html>
